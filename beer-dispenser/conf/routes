@@ -4,7 +4,20 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
+GET         /                                    controllers.HomeController.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file                        controllers.Assets.versioned(path="/public", file: Asset)
+# Add a new dispenser
+POST        /dispenser/new                       controllers.BeerDispenserController.addNewDispenser()
+# Open dispenser status
+PUT         /dispenser/open/:dispenserId         controllers.BeerDispenserController.openDispenser(dispenserId: java.util.UUID)
+# Close dispenser status
+PUT         /dispenser/close/:dispenserId        controllers.BeerDispenserController.closeDispenser(dispenserId: java.util.UUID)
+# Get the dispenser report
+GET         /dispenser/report                              controllers.BeerDispenserController.getDispenserReport()
+
+
+
+
+

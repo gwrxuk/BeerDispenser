@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS beer (
+     id UUID PRIMARY KEY NOT NULL,
+     total DOUBLE PRECISION NOT NULL,
+     duration BIGINT NOT NULL,
+     day VARCHAR (100) NOT NULL,
+     dispenser_id UUID NOT NULL
+);
